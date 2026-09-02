@@ -2,6 +2,11 @@
 
 This repository contains personal, self-written agent skills shared between Codex and Claude Code.
 
+## Git workflow
+
+- Always work directly on `main` in this repository.
+- Never create or use another branch in this repository.
+
 ## Skill conventions
 
 - Keep skills under `skills/<category>/<skill-name>/`.
