@@ -34,4 +34,3 @@ By default, Codex skills are linked into `${CODEX_HOME:-$HOME/.codex}/skills` an
 ```
 
 See [Adding a skill](docs/adding-a-skill.md) for the repository conventions.
-

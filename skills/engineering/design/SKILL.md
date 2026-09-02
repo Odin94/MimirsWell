@@ -55,4 +55,3 @@ Third, let's cover general design principles:
 - Actions that take some time and have multiple steps (working through a list or completing multiple tasks) should have a progress indicator
 - Generally prefer optimistic updating over pessimistic updating
 - Prefer showing cohesion / difference through layout, margins and proximity rather than putting borders on everything
-

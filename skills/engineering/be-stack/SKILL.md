@@ -5,4 +5,3 @@ disable-model-invocation: true
 ---
 
 For this backend, use typescript, fastify, and drizzle.
-

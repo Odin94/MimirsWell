@@ -16,4 +16,3 @@ This repository contains personal, self-written agent skills shared between Code
 - Check shell scripts with `bash -n scripts/*.sh`.
 - Test link scripts against a temporary directory before changing them.
 - Validate skill frontmatter and confirm that every skill has manual-invocation metadata for both supported agents.
-

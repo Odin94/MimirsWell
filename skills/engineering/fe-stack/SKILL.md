@@ -5,4 +5,3 @@ disable-model-invocation: true
 ---
 
 For this frontend, use typescript, react, tanstack libraries, shadcn and tailwind.
-
