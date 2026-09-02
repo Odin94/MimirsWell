@@ -1,0 +1,8 @@
+interface:
+  display_name: "BE Stack"
+  short_description: "Use the preferred backend stack"
+  default_prompt: "Use $be-stack for this backend implementation."
+
+policy:
+  allow_implicit_invocation: false
+

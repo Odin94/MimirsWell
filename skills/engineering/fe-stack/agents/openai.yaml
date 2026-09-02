@@ -1,0 +1,8 @@
+interface:
+  display_name: "FE Stack"
+  short_description: "Use the preferred frontend stack"
+  default_prompt: "Use $fe-stack for this frontend implementation."
+
+policy:
+  allow_implicit_invocation: false
+
