@@ -1,0 +1,7 @@
+interface:
+  display_name: "code-design"
+  short_description: "Write code according to Odin's preferences"
+  default_prompt: "Use $code-design for this implementation."
+
+policy:
+  allow_implicit_invocation: false
