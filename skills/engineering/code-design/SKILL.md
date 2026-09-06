@@ -37,11 +37,16 @@ Use these preferences when writing or modifying code:
   * In the frontend: Ensure that renders only trigger necessary components to rerender, virtualize large lists/tables etc (such that they're still scrollable fast without blurring!), paginate large lists/tables, show skeletons that get filled later for slow queries and don't block pageload on that, prefetch & cache things (auto-refresh cache, don't n+1 your queries), optimize images on build or ingestion
   * Backend: Paginate large data entries, for large objects don't include full details in list-queries, but only on details-queries, be async on DB requests/API requests/LLM queries and don't block while not doing work
 
+* Use early returns / guards at functions, immutable variables and pure functions where possible to make logic easier to reason about.
+
+
 ## Heuristics for bad code
 * Files that have more than 800 lines are almost certainly doing too much and should be split into cohesive sub-modules
 * Overly abstract code is bad and needs to be made more direct. Overly abstract heuristics:
   * if you have to go from the entry point (eg. http endpoint, main function..) to more than 2 other files to get to the meat of the logic, it's too abstract (Good: endpoint -> service with logic. Also good: endpoint -> service with logic -> domain function. Bad: endpoint -> ServiceInterface -> ServiceManager -> Service -> LogicInterface -> LogicAdapter -> domain function)
   * if you can't get to the logic by just cmd+clicking through functions, it's too abstract (Bad: you use magic code generation that you can't see in your editor, you use decorators to inject functionality that is non obvious eg. @authorized to make a function check for login credentials, )
+
+* Having to keep a lot of currently relevant state in mind (deep if/else indentation, lots of in-scope mutable variables, outside system state influence from multi-threading or time sensitivity or disk/db/api reads) while reading a function increases complexity and is bad. The less mutable state a user has to keep in mind to understand the current logic, the better.
 
 * A strong heuristic for good code is code you can easily click through by jumping from function to function, or through call hierarchies with no ambiguity to read what the code actually does (interface with multiple impls, decorators, code-gen, framework-magic all make this harder and are thus heuristics for bad code). On top of that, you can easily browse things with strong cohesion (eg. all web endpoints that affect the "user" domain object in one file, with a file that's still small enough to comfortably scroll through)
 
@@ -50,6 +55,7 @@ Use these preferences when writing or modifying code:
   * Add a way to LLMs to easily authenticate on localhost, like a local-login button that circumvents your regular auth provider and logs into a test account
   * Make sure all app logs (FE, BE and more if necessary) are easily accessible for your dev/LLM, write them locally for local runs
   * Everything you do through your web ui should be accessible through a documented API (through an API key) or even a stateless MCP
+
 
 ## Logging, Tracing and error responses
 * Logs should follow the OpenTelemetry format
