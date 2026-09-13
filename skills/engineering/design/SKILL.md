@@ -8,7 +8,7 @@ First, we need our app to look consistent: Define a color scheme first that has 
 
 Second let's cover animations:
 
-- Make sure that our buttons all have cursor:pointer on hover, scale to .97 on :active.
+- Make sure that our buttons/clickables all have cursor:pointer on hover, scale to .97 on :active.
 - Animate things that open / close dynamically from .90 scale, not 0 (only if a scale animation makes sense)
 - For items that have tooltips, skip the delay once a tooltip is shown (To do that you’ll need to target the `data-instant` attribute and set the transition duration to `0ms`.)
 - For animating things coming/fading/scaling in, use ease-out to make them show up fast. For animating things going out, use ease-in.
@@ -43,6 +43,7 @@ Third, let's cover general design principles:
 - Use at least two different fonts, but not more than 3 - a fancier font for headers, and a basic sans font for regular text
 - Avoid overusing pills, make sure they are necessary where you use them
 - Make sure the color of selection highlights match the item you're selecting and that their borders fit the borders of the item
+- "Delete" buttons should be subtle buttons with a trash icon and no text, confirmation buttons of deletion should spell out "Delete" as text, though
 - Make sure the design flows well on Desktop, Tablet and Phone screen sizes. Also make sure that on eg. firefox mobile, the bottom floating url bar doesn't overlap important UI elements
 - Make errors or warnings that are automatically fixable or that could offer more detailed info come with buttons that apply the fix / show more details
 - Make destructive or dangerous actions for things that can't be trivially recreated come with a confirmation dialog (custom designed! Not the browser built in one)
