@@ -11,11 +11,12 @@ A personal collection of self-written skills for Codex and Claude Code.
 └── skills/
     └── engineering/
         ├── be-stack/
+        ├── code-design/
         ├── design/
         └── fe-stack/
 ```
 
-All skills are manual-only. Invoke them explicitly as `$fe-stack`, `$be-stack`, or `$design` in Codex, and `/fe-stack`, `/be-stack`, or `/design` in Claude Code.
+All skills are manual-only. Invoke them explicitly as `$fe-stack`, `$be-stack`, `$code-design`, or `$design` in Codex, and `/fe-stack`, `/be-stack`, `/code-design`, or `/design` in Claude Code.
 
 ## Link the skills
 
@@ -34,3 +35,14 @@ By default, Codex skills are linked into `${CODEX_HOME:-$HOME/.codex}/skills` an
 ```
 
 See [Adding a skill](docs/adding-a-skill.md) for the repository conventions.
+
+## TODOs:
+
+* Add something for doing cool rumbl-y effects and particles / emoji bounces like https://haptics.lochie.me
+* Add something for floating-up text info and hover tooltips?
+* Add something for error text appearing right at the place of error (like progeny has)?
+* Add something for cozy designs
+
+## Credits
+
+* I take inspiration from [Emil Kowalski](https://github.com/emilkowalski/skills/tree/main), Matt Pocock

@@ -4,9 +4,11 @@ description: Apply Odin's visual design, interaction, animation, and responsive 
 disable-model-invocation: true
 ---
 
-First, we need our app to look consistent: Define a color scheme first that has enough colors and gaps and sizing styles to cover our needs. Then add reusable components for different button styles, cards, form inputs etc.; base these on the existing design libraries (eg. shadcn, tailwind or others if already present)
+## Consistent look:
 
-Second let's cover animations:
+Define a color scheme first that has enough colors and gaps and sizing styles to cover our needs. Then add reusable components for different button styles, cards, form inputs etc.; base these on the existing design libraries (eg. shadcn, tailwind or others if already present)
+
+## Animations:
 
 - Make sure that our buttons/clickables all have cursor:pointer on hover, scale to .97 on :active.
 - Animate things that open / close dynamically from .90 scale, not 0 (only if a scale animation makes sense)
@@ -37,7 +39,19 @@ Example styles for this:
 }
 ```
 
-Third, let's cover general design principles:
+Also use these custom ease animation curves instead of the default built in ones:
+```
+/* Strong ease-out for UI interactions */
+--ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+
+/* Strong ease-in-out for on-screen movement */
+--ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+
+/* iOS-like drawer curve (from Ionic Framework) */
+--ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+```
+
+## General design principles:
 
 - Avoid massive headers, keep them to a reasonable size
 - Use at least two different fonts, but not more than 3 - a fancier font for headers, and a basic sans font for regular text
@@ -56,3 +70,50 @@ Third, let's cover general design principles:
 - Actions that take some time and have multiple steps (working through a list or completing multiple tasks) should have a progress indicator
 - Generally prefer optimistic updating over pessimistic updating
 - Prefer showing cohesion / difference through layout, margins and proximity rather than putting borders on everything
+
+## Performance:
+
+**Only animate transform and opacity**
+These properties skip layout and paint, running on the GPU. Animating padding, margin, height, or width triggers all three rendering steps.
+
+This is important for css as well as framer motion:
+
+```
+// NOT hardware accelerated (convenient but drops frames under load)
+<motion.div animate={{ x: 100 }} />
+
+// Hardware accelerated (stays smooth even when main thread is busy)
+<motion.div animate={{ transform: "translateX(100px)" }} />
+```
+
+Prefer css animations over js animations.
+
+## Accessibility:
+
+**prefers-reduced-motion**
+Animations can cause motion sickness. Reduced motion means fewer and gentler animations, not zero. Keep opacity and color transitions that aid comprehension. Remove movement and position animations.
+
+```
+@media (prefers-reduced-motion: reduce) {
+  .element {
+    animation: fade 0.2s ease;
+    /* No transform-based motion */
+  }
+}
+```
+
+```
+const shouldReduceMotion = useReducedMotion();
+const closedX = shouldReduceMotion ? 0 : '-100%';
+```
+
+**Touch device hover states**
+```
+@media (hover: hover) and (pointer: fine) {
+  .element:hover {
+    transform: scale(1.05);
+  }
+}
+```
+
+Touch devices trigger hover on tap, causing false positives. Gate hover animations behind this media query.
