@@ -70,6 +70,9 @@ Also use these custom ease animation curves instead of the default built in ones
 - Actions that take some time and have multiple steps (working through a list or completing multiple tasks) should have a progress indicator
 - Generally prefer optimistic updating over pessimistic updating
 - Prefer showing cohesion / difference through layout, margins and proximity rather than putting borders on everything
+- Disabled buttons should have a hover tooltip explaining why they're disabled
+- Tooltips should have a custom style that fits the web app's style
+- Tooltips should display in the viewport and change their side/location they're showing on if they'd otherwise be cut off
 
 ## Performance:
 
