@@ -53,6 +53,7 @@ Also use these custom ease animation curves instead of the default built in ones
 
 ## General design principles:
 
+- Buttons should be fully clickable; it should never be that only the text or icon of a button is clickable
 - Avoid massive headers, keep them to a reasonable size
 - Use at least two different fonts, but not more than 3 - a fancier font for headers, and a basic sans font for regular text
 - Avoid overusing pills, make sure they are necessary where you use them
