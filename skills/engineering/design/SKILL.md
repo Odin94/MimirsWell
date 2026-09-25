@@ -94,6 +94,8 @@ Prefer css animations over js animations.
 
 ## Accessibility:
 
+- focus outlines should always touch the border of the component and be somewhat light and subtle, they should never be a dark and strong ring around the component
+
 **prefers-reduced-motion**
 Animations can cause motion sickness. Reduced motion means fewer and gentler animations, not zero. Keep opacity and color transitions that aid comprehension. Remove movement and position animations.
 
