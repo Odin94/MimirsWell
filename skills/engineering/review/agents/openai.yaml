@@ -1,0 +1,7 @@
+interface:
+  display_name: "Review"
+  short_description: "Independently review changes and follow through to merge"
+  default_prompt: "Use $review to independently review these changes, fix justified findings, address PR comments, and merge when CI is green."
+
+policy:
+  allow_implicit_invocation: false

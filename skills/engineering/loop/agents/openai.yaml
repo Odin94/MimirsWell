@@ -1,0 +1,7 @@
+interface:
+  display_name: "Loop"
+  short_description: "Repeat implementation and review until feedback is resolved"
+  default_prompt: "Use $loop to implement this task and repeat subagent review until no actionable feedback remains."
+
+policy:
+  allow_implicit_invocation: false

@@ -13,10 +13,15 @@ A personal collection of self-written skills for Codex and Claude Code.
         ├── be-stack/
         ├── code-design/
         ├── design/
-        └── fe-stack/
+        ├── fe-stack/
+        ├── loop/
+        └── review/
 ```
 
-All skills are manual-only. Invoke them explicitly as `$fe-stack`, `$be-stack`, `$code-design`, or `$design` in Codex, and `/fe-stack`, `/be-stack`, `/code-design`, or `/design` in Claude Code.
+All skills are manual-only. Invoke them explicitly as `$fe-stack`, `$be-stack`, `$code-design`, `$design`, `$loop`, or `$review` in Codex, and `/fe-stack`, `/be-stack`, `/code-design`, `/design`, `/loop`, or `/review` in Claude Code.
+
+- **Loop:** Implement, review with a subagent, and apply justified suggestions until no actionable feedback remains.
+- **Review:** Independently review completed changes with a fresh subagent, validate and fix findings, address PR comments, and merge when CI is green and repository requirements are met.
 
 ## Link the skills
 
@@ -38,11 +43,11 @@ See [Adding a skill](docs/adding-a-skill.md) for the repository conventions.
 
 ## TODOs:
 
-* Add something for doing cool rumbl-y effects and particles / emoji bounces like https://haptics.lochie.me
-* Add something for floating-up text info and hover tooltips?
-* Add something for error text appearing right at the place of error (like progeny has)?
-* Add something for cozy designs
+- Add something for doing cool rumbl-y effects and particles / emoji bounces like https://haptics.lochie.me
+- Add something for floating-up text info and hover tooltips?
+- Add something for error text appearing right at the place of error (like progeny has)?
+- Add something for cozy designs
 
 ## Credits
 
-* I take inspiration from [Emil Kowalski](https://github.com/emilkowalski/skills/tree/main), Matt Pocock
+- I take inspiration from [Emil Kowalski](https://github.com/emilkowalski/skills/tree/main), Matt Pocock
