@@ -11,6 +11,7 @@ A personal collection of self-written skills for Codex and Claude Code.
 └── skills/
     └── engineering/
         ├── be-stack/
+        ├── bugfix/
         ├── code-design/
         ├── design/
         ├── fe-stack/
@@ -18,8 +19,9 @@ A personal collection of self-written skills for Codex and Claude Code.
         └── review/
 ```
 
-All skills are manual-only. Invoke them explicitly as `$fe-stack`, `$be-stack`, `$code-design`, `$design`, `$loop`, or `$review` in Codex, and `/fe-stack`, `/be-stack`, `/code-design`, `/design`, `/loop`, or `/review` in Claude Code.
+All skills are manual-only. Invoke them explicitly as `$fe-stack`, `$be-stack`, `$bugfix`, `$code-design`, `$design`, `$loop`, or `$review` in Codex, and `/fe-stack`, `/be-stack`, `/bugfix`, `/code-design`, `/design`, `/loop`, or `/review` in Claude Code.
 
+- **Bugfix:** Gather evidence, reproduce a bug locally, identify its root cause, implement and independently review a fix, validate it, open a PR, and update its ticket when accessible.
 - **Loop:** Implement, review with a subagent, and apply justified suggestions until no actionable feedback remains.
 - **Review:** Independently review completed changes with a fresh subagent, validate and fix findings, address PR comments, and merge when CI is green and repository requirements are met.
 
