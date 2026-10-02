@@ -68,6 +68,7 @@ Also use these custom ease animation curves instead of the default built in ones
 - If there are more than 2 pages on the page, add a quick navigator that opens with cmd+k (or control+k), auto-selects it's input field to search for pages / items that can be opened
 - Make sure that (potentially) large lists are virtualized, and make sure that scrolling quickly through virtualized lists works and doesn't blur the list items - users should be able to scroll fast through the list to see what they need
 - File/image inputs should allow drag&drop and pasting images from clipboard
+- Pay attention to opportunities to auto-focus an input. User opens a dialog with a text input? Auto-focus it so they can start typing immediately. There's a chat? After sending a message, automatically re-focus the input and make sure it remains focused until user intentionally removes the focus so they can continuously type messages
 - Actions that take some time and have multiple steps (working through a list or completing multiple tasks) should have a progress indicator
 - Generally prefer optimistic updating over pessimistic updating
 - Prefer showing cohesion / difference through layout, margins and proximity rather than putting borders on everything
