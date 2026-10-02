@@ -66,6 +66,7 @@ Also use these custom ease animation curves instead of the default built in ones
 - If this is an SPA with multiple pages, use a router (tanstack router if no other is indicated or existing) and make sure navigation information is in the URL and browser back/forward works. This also applies to subnavigations, eg. a page with multiple tabs in the page
 - Lists of elements (tables, rows etc. - logical lists, not literal html lists) that can be acted upon should have a rightclick context menu with most important actions for quick access
 - If there are more than 2 pages on the page, add a quick navigator that opens with cmd+k (or control+k), auto-selects it's input field to search for pages / items that can be opened
+- Don't overwrite hotkeys that the browser would normally use (eg. cmd+f or ctrl+f)
 - Make sure that (potentially) large lists are virtualized, and make sure that scrolling quickly through virtualized lists works and doesn't blur the list items - users should be able to scroll fast through the list to see what they need
 - File/image inputs should allow drag&drop and pasting images from clipboard
 - Pay attention to opportunities to auto-focus an input. User opens a dialog with a text input? Auto-focus it so they can start typing immediately. There's a chat? After sending a message, automatically re-focus the input and make sure it remains focused until user intentionally removes the focus so they can continuously type messages
