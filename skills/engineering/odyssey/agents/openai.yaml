@@ -1,0 +1,7 @@
+interface:
+  display_name: "Odyssey"
+  short_description: "Plan large changes with shared goals and ordered tasks"
+  default_prompt: "Use $odyssey to plan this change with a shared goal, glossary, and ordered task files."
+
+policy:
+  allow_implicit_invocation: false
