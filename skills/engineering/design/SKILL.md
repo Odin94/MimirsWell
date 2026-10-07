@@ -58,6 +58,7 @@ Also use these custom ease animation curves instead of the default built in ones
 - Use at least two different fonts, but not more than 3 - a fancier font for headers, and a basic sans font for regular text
 - Avoid overusing pills, make sure they are necessary where you use them
 - Make sure the color of selection highlights match the item you're selecting and that their borders fit the borders of the item
+- Scrollbars and select dropdowns should fit the design theme, rather than just using a browser default
 - "Delete" buttons should be subtle buttons with a trash icon and no text, confirmation buttons of deletion should spell out "Delete" as text, though
 - Make sure the design flows well on Desktop, Tablet and Phone screen sizes. Also make sure that on eg. firefox mobile, the bottom floating url bar doesn't overlap important UI elements
 - Make errors or warnings that are automatically fixable or that could offer more detailed info come with buttons that apply the fix / show more details
