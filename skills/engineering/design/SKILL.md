@@ -77,6 +77,8 @@ Also use these custom ease animation curves instead of the default built in ones
 - Disabled buttons should have a hover tooltip explaining why they're disabled
 - Tooltips should have a custom style that fits the web app's style
 - Tooltips should display in the viewport and change their side/location they're showing on if they'd otherwise be cut off
+- Make sure that inputs have the same height (especially dropdowns & text inputs), text areas can ofc be bigger
+- Make sure that buttons have reasonable margin around them and don't directly touch other elements
 
 ## Performance:
 
