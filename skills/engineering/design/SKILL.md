@@ -56,6 +56,7 @@ Also use these custom ease animation curves instead of the default built in ones
 - Buttons should be fully clickable; it should never be that only the text or icon of a button is clickable
 - Avoid massive headers, keep them to a reasonable size
 - Use at least two different fonts, but not more than 3 - a fancier font for headers, and a basic sans font for regular text
+- Avoid typical AI fonts, favor basic timeless fonts like Helvetica
 - Avoid overusing pills, make sure they are necessary where you use them
 - Make sure the color of selection highlights match the item you're selecting and that their borders fit the borders of the item
 - Scrollbars and select dropdowns should fit the design theme, rather than just using a browser default
