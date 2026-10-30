@@ -1,6 +1,6 @@
 ---
 name: bugfix
-description: Investigate and reproduce a bug, identify its root cause, implement and independently review a fix, validate it, and open a PR. Use only when explicitly invoked.
+description: Investigate and reproduce a bug, identify its root cause, implement and independently review a fix, validate it, and open a PR.
 disable-model-invocation: true
 ---
 
@@ -11,7 +11,7 @@ disable-model-invocation: true
    - If you cannot reproduce the bug, do not guess at a possible fix. Instead, try what you reasonably can do to reproduce and if it doesn't work, report back that you couldn't reproduce and include a concise summary of what you tried to reproduce the bug.
 3. When you can cleanly reproduce it, find the root cause; add temporary local logging and metrics to help if needed.
 4. Implement a fix for the bug.
-5. Have a fresh subagent independently review the changes against the original prompt, logs/analytics, agreed goals, and any later requirements. Give it access to the diff, relevant code, tests, and repository instructions, without the main agent's implementation rationale. Start it without inherited implementation discussion.
+5. Have a fresh subagent independently review the changes against the original prompt, logs/analytics, agreed goals, and any later requirements. Give it access to the diff, relevant code, tests, and repository instructions, without the main agent's implementation rationale. Start it without inherited implementation discussion. Evaluate it's feedback and implement what is valuable.
 6. Run the steps that reproduced the bug earlier to validate that it is fixed.
 7. Open a PR with your fix.
 
