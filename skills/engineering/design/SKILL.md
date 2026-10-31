@@ -53,6 +53,7 @@ Also use these custom ease animation curves instead of the default built in ones
 
 ## General design principles:
 
+- Avoid ChatGPT-typical text blurbs for decoration, and don't leak dev decisions into the UI (eg. "your message is encrypted" or "this page only refreshes once per 2 minutes")
 - Buttons should be fully clickable; it should never be that only the text or icon of a button is clickable
 - Avoid massive headers, keep them to a reasonable size
 - Use at least two different fonts, but not more than 3 - a fancier font for headers, and a basic sans font for regular text
