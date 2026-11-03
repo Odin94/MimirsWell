@@ -1,7 +1,7 @@
 ---
 name: design
-description: Apply Odin's visual design, interaction, animation, and responsive UX principles when explicitly requested.
-disable-model-invocation: true
+description: Apply Odin's visual design, interaction, animation, and responsive UX principles when making UI design changes or building frontends that involve visual design. Use for layouts, styling, components, and interaction design; skip backend-only work and frontend logic changes without UI design impact.
+disable-model-invocation: false
 ---
 
 ## Consistent look:

@@ -7,3 +7,5 @@
 5. Run the repository validation commands documented in `AGENTS.md`, then rerun the appropriate link script.
 
 The link scripts discover skills by finding `SKILL.md` files below `skills/`, so no registry needs to be maintained. Skill names must be unique across categories because they share a flat installation directory.
+
+New skills are manual-only by default. The existing `design` skill is the exception: it uses `disable-model-invocation: false` and `policy.allow_implicit_invocation: true` to allow automatic selection for UI design changes and frontend work involving visual design.
