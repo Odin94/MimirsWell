@@ -75,6 +75,8 @@ Also use these custom ease animation curves instead of the default built in ones
 - Pay attention to opportunities to auto-focus an input. User opens a dialog with a text input? Auto-focus it so they can start typing immediately. There's a chat? After sending a message, automatically re-focus the input and make sure it remains focused until user intentionally removes the focus so they can continuously type messages
 - Actions that take some time and have multiple steps (working through a list or completing multiple tasks) should have a progress indicator
 - Generally prefer optimistic updating over pessimistic updating
+- When elements need data to display, show loading skeletons that reserve their space so the page doesn't reflow when content appears. When elements depend on separate requests, show error states for those that fail while continuing to display those that succeed.
+- Keep cached data displayed while fetching new data in the background (eg. with TanStack Query) to make moving back and forth between pages feel snappy. Use UX judgment to decide whether a small fetching indicator is useful during background refreshes.
 - Prefer showing cohesion / difference through layout, margins and proximity rather than putting borders on everything
 - Disabled buttons should have a hover tooltip explaining why they're disabled
 - Tooltips should have a custom style that fits the web app's style
