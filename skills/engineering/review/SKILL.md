@@ -14,3 +14,5 @@ In the main thread, validate each finding against the requirements and code. Imp
 
 Address PR comments by validating them and implementing justified fixes. Follow the repository's PR and merge workflow and the user's existing authorization (if this is a repo where usually changes are pushed to main rather than going through branches & CI, just validate locally and push to main). 
 If there is a repository, merge when required CI is green and required approvals are satisfied. If CI fails, fix the failure and rerun the relevant checks before merging. Report any unresolved findings or merge blockers. If there is no repository or no CI pipeline, just run tests and validation locally.
+
+Open the PR after review/fixup is done checks pass locally

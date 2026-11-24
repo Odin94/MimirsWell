@@ -44,3 +44,5 @@ next round if available.
 Finish when required checks pass on the current patch and review covers its
 behavior with no material findings open. If review or verification is blocked,
 or the budget runs out with work open, report what remains and the evidence.
+
+If you plan on creating a PR, open it after the review / fix loop is done and checks pass locally.
