@@ -10,7 +10,8 @@ Define a color scheme first that has enough colors and gaps and sizing styles to
 
 ## Animations:
 
-- Make sure that our buttons/clickables all have cursor:pointer on hover, scale to .97 on :active.
+- Use `cursor: pointer` on hover and scale clickable controls to `0.97` on `:active`. Skip scaling for buttons that open select lists.
+  Include adjacent elements in the scale only when they should feel like part of the same press.
 - Animate things that open / close dynamically from .90 scale, not 0 (only if a scale animation makes sense)
 - For items that have tooltips, skip the delay once a tooltip is shown (To do that you’ll need to target the `data-instant` attribute and set the transition duration to `0ms`.)
 - For animating things coming/fading/scaling in, use ease-out to make them show up fast. For animating things going out, use ease-in.
