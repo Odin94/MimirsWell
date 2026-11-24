@@ -23,7 +23,7 @@ A personal collection of self-written skills for Codex and Claude Code.
 The `design` skill can activate automatically when making UI design changes or building frontends that involve visual design. All other skills are manual-only. You can still invoke any skill explicitly as `$fe-stack`, `$be-stack`, `$bugfix`, `$code-design`, `$design`, `$loop`, `$odyssey`, or `$review` in Codex, and `/fe-stack`, `/be-stack`, `/bugfix`, `/code-design`, `/design`, `/loop`, `/odyssey`, or `/review` in Claude Code.
 
 - **Bugfix:** Gather evidence, reproduce a bug locally, identify its root cause, implement and independently review a fix, validate it, open a PR, and update its ticket when accessible.
-- **Loop:** Implement, review with a subagent, and apply justified suggestions until no actionable feedback remains.
+- **Loop:** Implement, verify, and resolve material findings in a bounded subagent review.
 - **Odyssey:** Plan large changes through code-informed questions, a shared goal and glossary, and ordered task files that track progress across fresh implementation threads.
 - **Review:** Independently review completed changes with a fresh subagent, validate and fix findings, address PR comments, and merge when CI is green and repository requirements are met.
 

@@ -1,16 +1,46 @@
 ---
 name: loop
-description: Iterate implementation and subagent review until no actionable feedback remains. Use only when explicitly invoked.
+description:
+  Implement, verify, and iterate through a bounded subagent review. Use only
+  when explicitly invoked.
 disable-model-invocation: true
 ---
 
 # Loop
 
-For implementation, run this loop:
+## 1. Build and verify
 
-1. Implement the requested changes against the original prompt, agreed goals, and any later requirements.
-2. Spin up a fresh review subagent to inspect the current changes. Give it the requirements, diff, relevant code, tests, and repository instructions. Ask for actionable findings with concrete evidence.
-3. In the main thread, validate the findings and implement justified suggestions. Run the checks appropriate to the fixes. If a suggestion is unjustified, record why instead of applying it blindly.
-4. Repeat the review and implementation cycle on the updated changes until the review subagent provides no more actionable feedback. Resolve disputed findings with evidence; do not count dismissing feedback as a clean review.
+Pin the diff base. State the requested behavior and what would prove it works.
+Implement the smallest change that meets the request and run that check through
+the affected interface. For bugs, run the same repro before and after the fix
+when practical. Record missing checks and pre-existing failures.
 
-If review or a required fix is blocked, report the blocker and remaining findings rather than claiming the loop is complete.
+## 2. Review
+
+Start one fresh, read-only subagent per round. Give it the requirements, the
+scoped patch including uncommitted files, repo rules, and check results. Leave
+out the builder's rationale. Keep the patch stable during review and note which
+patch the verdict covers.
+
+- **Spec.** Look for missing, wrong, or unrequested behavior.
+- **Standards.** Look for repo rule violations and maintainability problems with
+  a concrete consequence.
+
+Ask for a verdict and findings with severity, file and line, and impact. Prefer
+a runnable repro with expected and actual results. A code trace or cited
+requirement can establish a finding too. Label unverified concerns.
+
+## 3. Fix and stop
+
+Validate findings in the main thread. Make the smallest justified fixes and
+rerun the relevant checks. Keep a short ledger of what was fixed, disputed, or
+deferred and why.
+
+Use up to three rounds by default. Review the whole scoped patch first, then
+check changed behavior and open findings. Nits alone need no further round. When
+a material finding stays disputed, use a reviewer from another provider for the
+next round if available.
+
+Finish when required checks pass on the current patch and review covers its
+behavior with no material findings open. If review or verification is blocked,
+or the budget runs out with work open, report what remains and the evidence.
